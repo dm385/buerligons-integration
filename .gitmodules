@@ -1,0 +1,3 @@
+[submodule "packages/buerligons"]
+	path = packages/buerligons
+	url = https://github.com/awv-informatik/buerligons.git
