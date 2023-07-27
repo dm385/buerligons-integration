@@ -1,0 +1,15 @@
+{
+  "name": "@buerligons-integration/root",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Integrate buerligons into your application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd packages/app && vite"
+  },
+  "author": "AWV Informatik AG <info@awv-informatik.ch>",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ]
+}
