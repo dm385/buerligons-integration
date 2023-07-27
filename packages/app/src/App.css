@@ -1,7 +1,41 @@
 #root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  letter-spacing: -1px;
   margin: 0;
   padding: 0;
-  text-align: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #24243e, #302b63, #0f0c29); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main {
+  height: calc(100% - 105px);
+  margin: 20px 40px 20px 40px;
+}
+
+.header {
+  display: flex;
+  column-gap: 20px;
+  height: 50px;
+}
+
+.header a {
+  color: whitesmoke !important;
+}
+
+.header a:hover {
+  color: #8360c3 !important; /* fallback for old browsers */
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 4px;
+  padding: 4px;
 }
