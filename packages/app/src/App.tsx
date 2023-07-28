@@ -9,6 +9,18 @@ initBuerli()
 
 export const App: React.FC = () => {
   const [file, setFile] = React.useState<string>('')
+
+  const escape = React.useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setFile('')
+    }
+  }, [])
+
+  React.useEffect(() => {
+    document.addEventListener('keydown', escape, false)
+    return () => document.removeEventListener('keydown', escape, false)
+  }, [escape])
+
   return (
     <div className="main">
       <div className="header">
