@@ -10,6 +10,17 @@ export const Viewer: React.FC<{ file: string }> = props => {
   const [drId, setDrId] = React.useState<DrawingID>('')
 
   React.useEffect(() => {
+    const run = async () => {
+      const id = await ccAPI.base.createCCDrawing()
+      if (id) {
+        await ccAPI.baseModeler.loadFromUrl(id!, file, 'stp', true)
+        setDrId(id)
+      }
+    }
+    run()
+  }, [file])
+
+  React.useEffect(() => {
     return () => {
       if (drId) {
         api.getState().api.removeDrawing(drId)
@@ -17,14 +28,5 @@ export const Viewer: React.FC<{ file: string }> = props => {
     }
   }, [drId])
 
-  React.useEffect(() => {
-    const run = async () => {
-      const id = (await ccAPI.base.createCCDrawing()) || ''
-      await ccAPI.baseModeler.loadFromUrl(id!, file, 'stp', true)
-      setDrId(id)
-    }
-    run()
-  }, [file])
-
-  return drId ? <Buerligons /> : null
+  return drId ? <Buerligons key={file} /> : <div></div>
 }
