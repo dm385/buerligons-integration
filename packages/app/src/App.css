@@ -32,8 +32,8 @@
 }
 
 .container {
-  height: 100%;
-  width: 100%;
+  height: calc(100% - 80px);
+  margin: 60px 40px 0px 40px;
   background: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 4px;
