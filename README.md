@@ -29,8 +29,8 @@ Integrate buerligons into your application
    yarn dev
    ```
 
-As soon as the server is up, the application is available under `localhost:8085`
+   As soon as the server is up, the application is available under `localhost:8085`.
 
-5. Make sure a ClassCAD Server is running on `localhost:9091`
+5. Make sure a ClassCAD Server is running on `localhost:9091`.
 
    https://buerli.io/docs/setup-environment/server
