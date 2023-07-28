@@ -21,6 +21,13 @@ export const App: React.FC = () => {
     return () => document.removeEventListener('keydown', escape, false)
   }, [escape])
 
+  React.useEffect(() => {
+    const queryParameters = new URLSearchParams(window.location.search)
+    const url = `http://127.0.0.1:8085${queryParameters.get('url')}`
+    console.info(url)
+    setFile(url)
+  }, [])
+
   return (
     <div className="main">
       <div className="header">
