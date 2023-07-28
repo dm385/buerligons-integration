@@ -38,6 +38,6 @@ Integrate buerligons into your application
    > Since ClassCAD fetches files from the client development server (localhost:8085), the two servers have to run on the same host. E.g. it won't work if the server is running in docker and the client on the host.
 
 
-## Provied file by URL Parameter
+## Provide file by URL Parameter
 
 http://localhost:8085?url=/axis.stp
