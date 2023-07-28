@@ -13,7 +13,7 @@ export const Editor: React.FC<{ file: string }> = props => {
     const run = async () => {
       const id = await ccAPI.base.createCCDrawing()
       if (id) {
-        await ccAPI.baseModeler.loadFromUrl(id!, file, 'stp', true)
+        await ccAPI.baseModeler.loadFromUrl(id, file, 'stp', true)
         setDrId(id)
       }
     }
