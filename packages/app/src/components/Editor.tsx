@@ -5,7 +5,7 @@ import { DrawingID, api } from '@buerli.io/core'
 
 import { Buerligons } from '../../../buerligons/src/components/Buerligons'
 
-export const Viewer: React.FC<{ file: string }> = props => {
+export const Editor: React.FC<{ file: string }> = props => {
   const { file } = props
   const [drId, setDrId] = React.useState<DrawingID>('')
 

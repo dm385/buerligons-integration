@@ -1,15 +1,14 @@
 import React from 'react'
 import './App.css'
 
+import { Editor } from './components/Editor'
 import { Portal } from './components/Portal'
-import { Viewer } from './components/Viewer'
 
 import { initBuerli } from '../../buerligons/src/initBuerli'
 initBuerli()
 
 export const App: React.FC = () => {
   const [file, setFile] = React.useState<string>('')
-
   return (
     <div className="main">
       <div className="header">
@@ -17,7 +16,7 @@ export const App: React.FC = () => {
         <a onClick={() => setFile('http://127.0.0.1:8085/clamp.stp')}>clamp.stp</a>
       </div>
       <Portal show={Boolean(file)} contentClassName="container" onMissedClicked={() => setFile('')}>
-        <Viewer file={file} />
+        <Editor file={file} />
       </Portal>
     </div>
   )
