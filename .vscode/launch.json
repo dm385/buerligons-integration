@@ -9,7 +9,7 @@
       "name": "Run chrome",
       "type": "chrome",
       "request": "launch",
-      "url": "http://127.0.0.1:8085",
+      "url": "http://localhost:8085",
       "sourceMaps": true,
       "webRoot": "${workspaceRoot}/packages/app",
       "userDataDir": "${workspaceRoot}/.vscode/chrome", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
